@@ -1,0 +1,92 @@
+/* BEGIN CODE HERE */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 58px;
+    width: 250px;
+}
+
+/*.nav-items {
+    making Home and Products further apart
+}*/
+
+.frame1 {
+    height: 400px;
+    width: 1200px;
+    padding: 1.5%;
+    margin: 20px;
+}
+
+.col1-2 {
+    width: 600px;
+}
+
+.frame2 {
+    height: 400px;
+    width: 1200px;
+    padding: 1.5%;
+    margin: 20px;
+}
+
+.image-2 {
+    width: 300px;
+}
+
+.image-3 {
+    width: 300px;
+}
+
+.row-top {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: end;
+    text-align: right;
+}
+
+.row-bottom {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    text-align: top;
+}
+.frame3 {
+    height: 400px;
+    width: 1200px;
+    padding: 1.5%;
+    margin: 20px;
+}
+
+footer {
+    height: 100px;
+}
+
+.footer-text {
+    align-items: center;
+    text-align: center;
+}
+
+/* END CODE HERE */

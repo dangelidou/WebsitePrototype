@@ -1,0 +1,81 @@
+/* BEGIN CODE HERE */
+nav {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7%;
+}
+
+.logo {
+    height: 58px;
+    width: 250px;
+}
+
+/*.nav-items {
+    making Home and Products further apart
+}*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.frame-4 {
+    border: 1px solid black;
+    padding: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.frame-4 input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.frame-4 button {
+    padding: 5px 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+
+.frame-5 {
+    border: 1px solid black;
+    padding: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+label {
+    align-self: end;
+}
+
+
+footer {
+    height: 100px;
+}
+
+.footer-text {
+    align-items: center;
+    text-align: center;
+}
+
+/* END CODE HERE */
