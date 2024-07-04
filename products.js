@@ -1,14 +1,14 @@
 const api = "http://127.0.0.1:5000";
 
 window.onload = () => {
-    // BEGIN CODE HERE
+
     document.getElementById('product-form').addEventListener('submit', productFormOnSubmit);
     document.getElementById('search-button').addEventListener('click', searchButtonOnClick);
-    // END CODE HERE
+
 }
 
 searchButtonOnClick = () => {
-    // BEGIN CODE HERE
+
     preventDefault();  // Prevent the form from submitting and refreshing the page
 
     const search_name = document.getElementById('search-name').value;
@@ -53,12 +53,11 @@ searchButtonOnClick = () => {
     //         results.innerHTML = `<tr><td colspan="2">An error occurred</td></tr>`;
     //     });
 
-    // END CODE HERE
 
 }
 
 productFormOnSubmit = (event) => {
-    // BEGIN CODE HERE
+
     event.preventDefault();
     let product = {
         id: "",
@@ -81,5 +80,5 @@ productFormOnSubmit = (event) => {
             console.error('Error:', error);
         });
     console.log("Product added");
-    // END CODE HERE
+
 }
