@@ -7,13 +7,12 @@ window.onload = () => {
 
 }
 
-searchButtonOnClick = () => {
-
-    preventDefault();  // Prevent the form from submitting and refreshing the page
+function searchButtonOnClick(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
 
     const search_name = document.getElementById('search-name').value;
     const res = new XMLHttpRequest();
-    res.open("GET", `${api}/search?name=${encodeURIComponent(search_name)}`);
+    res.open("GET", `http://127.0.0.1:5000/search?name=${encodeURIComponent(search_name)}`);
 
     res.onreadystatechange = () => {
         if (res.readyState == 4 && res.status == 200) {
@@ -47,14 +46,8 @@ searchButtonOnClick = () => {
 
     // Clear the input field
     document.getElementById('search-name').value = '';
-    // )
-    // .catch ((error) => {
-    //         console.error('Error:', error);
-    //         results.innerHTML = `<tr><td colspan="2">An error occurred</td></tr>`;
-    //     });
-
-
 }
+
 
 productFormOnSubmit = (event) => {
 
@@ -80,5 +73,5 @@ productFormOnSubmit = (event) => {
             console.error('Error:', error);
         });
     console.log("Product added");
-
+    document.getElementById("product-form").reset();
 }

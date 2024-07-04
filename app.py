@@ -1,4 +1,3 @@
-# BEGIN CODE HERE
 from flask import Flask, request, jsonify
 from flask_pymongo import PyMongo
 from flask_cors import CORS
@@ -6,7 +5,6 @@ from pymongo import TEXT
 import numpy as np
 
 
-# END CODE HERE
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://127.0.0.1:27017/pspi"
@@ -17,7 +15,6 @@ mongo.db.products.create_index([("name", TEXT)])
 app.run(debug=True)
 @app.route("/search", methods=["GET"])
 def search():
-    # BEGIN CODE HERE
     try:
        
         search_name = request.args.get('name')
@@ -32,12 +29,11 @@ def search():
         return jsonify(result_list)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    # END CODE HERE
+
 
 
 @app.route("/add-product", methods=["POST"])
 def add_product():
-    # BEGIN CODE HERE
     try:
         data = request.get_json()
         
@@ -73,12 +69,11 @@ def add_product():
         return jsonify({"message": message}), status_code
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    # END CODE HERE
+
 
 
 @app.route("/content-based-filtering", methods=["POST"])
 def content_based_filtering():
-    # BEGIN CODE HERE
     try:
         product_name = request.json.get("name")
         product = mongo.db.products.find_one({"name": product_name})
@@ -112,14 +107,12 @@ def content_based_filtering():
         return jsonify({"error": str(e)}), 500
     
     
-    
-    # END CODE HERE
+
 
 
 @app.route("/crawler", methods=["GET"])
 def crawler():
-    # BEGIN CODE HERE
-    
+
     try:
         semester = request.args.get('semester')
         url = "https://qa.auth.gr/el/x/studyguide/600000438/current"
@@ -150,4 +143,3 @@ def crawler():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-    # END CODE HERE
